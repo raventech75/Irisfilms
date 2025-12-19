@@ -8,8 +8,9 @@ import { Play, X, Menu, Instagram, Video, Paintbrush, Heart, ChevronDown, Send }
  * Architecture : Next.js (App Router) / Tailwind CSS
  */
 export default function App() {
+  // Correction de l'erreur TypeScript : on autorise string ou null
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeVideo, setActiveVideo] = useState(null);
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   // Gestion du scroll pour la barre de navigation
@@ -21,7 +22,7 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Animation d'apparition au scroll (simple implementation)
+  // Animation d'apparition au scroll
   useEffect(() => {
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
@@ -39,7 +40,7 @@ export default function App() {
 
   const videos = [
     {
-      id: "qMtcWqz_mO4", // ID YouTube exemple
+      id: "qMtcWqz_mO4",
       title: "Manon & Hugo",
       location: "Domaine de Canaille, Cassis",
       thumbnail: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop"
