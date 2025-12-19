@@ -227,7 +227,9 @@ export default function App() {
               <input type="email" placeholder="VOTRE EMAIL" className="w-full bg-transparent border-b border-gray-200 py-3 text-[10px] tracking-[0.3em] focus:outline-none focus:border-[#d4c4b5] transition-colors uppercase font-light" />
             </div>
             <input type="text" placeholder="DATE & LIEU DU MARIAGE" className="w-full bg-transparent border-b border-gray-200 py-3 text-[10px] tracking-[0.3em] focus:outline-none focus:border-[#d4c4b5] transition-colors uppercase font-light" />
-            <textarea rows="4" placeholder="VOTRE MESSAGE" className="w-full bg-transparent border-b border-gray-200 py-3 text-[10px] tracking-[0.3em] focus:outline-none focus:border-[#d4c4b5] transition-colors uppercase font-light resize-none"></textarea>
+            
+            {/* CORRECTION : rows={4} au lieu de rows="4" */}
+            <textarea rows={4} placeholder="VOTRE MESSAGE" className="w-full bg-transparent border-b border-gray-200 py-3 text-[10px] tracking-[0.3em] focus:outline-none focus:border-[#d4c4b5] transition-colors uppercase font-light resize-none"></textarea>
             
             <button type="button" className="group mt-12 flex items-center justify-center space-x-4 mx-auto text-[10px] tracking-[0.4em] uppercase font-light">
               <span className="border-b border-transparent group-hover:border-[#4a4a4a] transition-all py-1">Envoyer la demande</span>
